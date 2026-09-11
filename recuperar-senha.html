@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Dog's Team - Recuperar Senha</title>
+</head>
+
+<body>
+  <div class="Login">
+    <h1>Recuperar Senha</h1>
+    <form id="RecuperarSenha" action="recuperar-senha.php" method="POST" accept-charset="utf-8">
+      <div class="input_box">
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" aria-label="E-mail" required>
+        <img src="imagens/email.png" class="user-png" alt="">
+      </div>
+
+      <p class="form-error" id="recuperar-msg" aria-live="polite"></p>
+
+      <button type="submit" class="btn">Enviar link de recuperação</button>
+
+      <div class="Register">
+        <p>Lembrou a senha? <a href="index.html">Voltar ao login</a></p>
+      </div>
+    </form>
+  </div>
+  <script src="recuperar_script.js"></script>
+</body>
+</html>

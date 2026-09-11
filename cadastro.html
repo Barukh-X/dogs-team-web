@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Dog's Team - Cadastro</title>
+</head>
+
+<body>
+  <div class="Login">
+    <h1>Cadastro</h1>
+    <form id="Cadastrar" action="cadastro.php" method="POST" accept-charset="utf-8">
+      <div class="input_box">
+        <input type="text" name="nome" id="nome" placeholder="Nome completo" aria-label="Nome completo" required>
+        <img src="imagens/user.png" class="user-png" alt="">
+      </div>
+      <div class="input_box">
+        <input type="text" name="user" id="user" placeholder="Usuario" aria-label="Usuário" required>
+        <img src="imagens/user.png" class="user-png" alt="">
+      </div>
+      <div class="input_box">
+        <input type="email" name="email" id="email" placeholder="E-mail" aria-label="E-mail" required>
+        <img src="imagens/email.png" class="user-png" alt="">
+      </div>
+      <div class="input_box">
+        <input type="password" name="password" id="password" placeholder="Senha" aria-label="Senha" required>
+        <img src="imagens/pass.png" class="pass-png" alt="">
+      </div>
+      <div class="input_box">
+        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmar senha" aria-label="Confirmar senha" required>
+        <img src="imagens/pass.png" class="pass-png" alt="">
+      </div>
+
+      <p class="form-error" id="cadastro-erro" aria-live="polite"></p>
+
+      <button type="submit" class="btn">Cadastrar</button>
+
+      <div class="Register">
+        <p>Já tem uma conta? <a href="index.html">Login</a></p>
+      </div>
+    </form>
+  </div>
+  <script src="cadastro_script.js"></script>
+</body>
+</html>

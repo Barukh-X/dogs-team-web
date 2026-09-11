@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url("imagens/dog.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.Login {
+  width: 420px;
+  max-width: 100%;
+  min-height: 320px;
+  height: auto;
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(10px);
+  padding: 30px 40px;
+}
+
+.Login h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+}
+
+.Login .input_box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input_box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  padding: 20px 45px 20px 20px;
+  color: #fff;
+}
+
+.input_box input::placeholder {
+  color: #fff;
+}
+
+.input_box img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+}
+
+.Forgot_password {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  margin: -10px 0 20px;
+}
+
+.Forgot_password a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.Forgot_password a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.Register {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14.5px;
+  color: #fff;
+}
+
+.Register a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.Register a:hover {
+  text-decoration: underline;
+}
+
+.form-error {
+  color: #ffb3b3;
+  font-size: 13px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  min-height: 16px;
+}
+
+@media (max-width: 480px) {
+  .Login {
+    padding: 30px 25px;
+  }
+
+  .Login h1 {
+    font-size: 28px;
+  }
+
+  .input_box {
+    height: 45px;
+    margin: 22px 0;
+  }
+
+  .input_box input {
+    font-size: 15px;
+    padding: 15px 40px 15px 15px;
+  }
+
+  .Forgot_password a,
+  .Register {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 340px) {
+  .Login {
+    padding: 25px 18px;
+  }
+
+  .Login h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px), (pointer: coarse) {
+  body {
+    background-attachment: scroll;
+  }
+}
