@@ -11,12 +11,12 @@ formulario.addEventListener("submit", async (event) => {
     const res = await fetch(`${API}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      credentials: "include",
       body: JSON.stringify({ logar, senha })
     });
     const dados = await res.json();
     if (!res.ok) throw new Error(dados.erro);
     
+    localStorage.setItem("token", dados.token);
     window.location.href = "dashboard.html";
   } catch (erro) {
     alert(erro.message || "Erro ao conectar com o servidor.");

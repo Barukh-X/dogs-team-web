@@ -1,8 +1,8 @@
+const API = "http://127.0.0.1/dogs-team-api/public/api";
 const formulario = document.getElementById("Cadastrar");
 const erroEl = document.getElementById("cadastro-erro");
-const API = "http://127.0.0.1/dogs-team-api/public/api";
 
-formulario.addEventListener("submit", function(event) {
+formulario.addEventListener("submit", async (event) => {
   event.preventDefault();
   
   const nome = document.getElementById("nome").value.trim();
@@ -24,16 +24,16 @@ formulario.addEventListener("submit", function(event) {
   }
   
   try {
-  const res = await fetch(`${API}/cadastrar`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ nome, username, email, senha })
-  });
-  const dados = await res.json();
-  if (!res.ok) throw new Error(dados.erro);
-
-  window.location.href = "index.html";
-} catch (erro) {
-  erroEl.textContent = erro.message || "Erro ao conectar com o servidor.";
-}
+    const res = await fetch(`${API}/cadastrar`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nome, usuario, email, senha })
+    });
+    const dados = await res.json();
+    if (!res.ok) throw new Error(dados.erro);
+    
+    window.location.href = "index.html";
+  } catch (erro) {
+    erroEl.textContent = erro.message || "Erro ao conectar com o servidor.";
+  }
 });
